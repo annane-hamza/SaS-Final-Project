@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 
 #define max 10
 
@@ -20,9 +19,37 @@ struct aerport
 
 struct aerport airport;
 
+void stringcopy(char s1[], char s2[])
+{
+    int i = 0;
+
+    while (s2[i] != '\0')
+    {
+        s1[i] = s2[i];
+        i++;
+    }
+
+    s1[i] = '\0';
+}
+
+void ajouterAirport()
+{
+    char name[50];
+
+    printf("Entrez le nom de l'aeroport: ");
+
+    scanf("%[^\n]%*c", name);
+
+    stringcopy(airport.nom, name);
+
+    airport.nbAvions = 0;
+}
 int main()
 {
     int choice;
+
+    ajouterAirport();
+
     do
     {
 
@@ -40,10 +67,10 @@ int main()
         switch (choice)
         {
         case 1:
-             printf("1. Ajouter un avion (ou plusieurs)\n");
+            ajouterAirport();
             break;
         case 2:
-             printf("2. Afficher la liste des avions\n");
+            printf("%s \n", airport.nom); // for test
             break;
         case 3:
             printf("3. Modifier un avion (modele, capacite, statut)\n");
