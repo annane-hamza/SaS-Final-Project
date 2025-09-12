@@ -1,5 +1,5 @@
-#ifndef LIBRARY_H
-#define LIBRARY_H
+#ifndef HEADER_H
+#define HEADER_H
 
 #define max 10
 
@@ -20,7 +20,6 @@ struct aerport
 
 extern struct aerport airport;
 
-void stringcopy(char s1[], char s2[]);
 void ajouterAirport();
 void ajouterAvions();
 void Afficher_avions();

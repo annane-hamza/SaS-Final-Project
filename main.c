@@ -10,9 +10,9 @@ int main()
     do
     {
         printf("-------------------------------------------------------\n");
-        printf("          Welcome To %s                                \n",airport.nom);
+        printf("          Welcome To %s                                \n", airport.nom);
         printf("--------------------------------------------------------\n");
-        
+
         printf("\n====== MENU ======\n");
         printf("1. Ajouter avion(s)\n");
         printf("2. Afficher avions\n");
@@ -22,6 +22,7 @@ int main()
         printf("6. Rechercher avion par modele\n");
         printf("7. Trier avions par capacite\n");
         printf("8. Trier avions par modele (alphabetique)\n");
+        printf("9- Statistiques\n");
         printf("0. Quitter\n");
         printf("==================\n");
         printf("Votre choix: ");
@@ -61,6 +62,7 @@ int main()
             break;
         default:
             printf("Choix invalide!\n");
+            break;
         }
 
     } while (choix != 0);
